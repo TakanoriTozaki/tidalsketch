@@ -1,0 +1,12 @@
+cps (120/120)
+
+d1 $ slow 2 $ spin 4 $ sound (samples "bd*16" (run 30))
+# speed (scale 0 10 $ slow 10 $ square)
+# n (irand 30)
+# pan (scale 0.5 10.0 $ slow 2 $ tri)
+# gain (scale 0.5 1.0 $ slow 2 $ square)
+# delay "0.5"
+# delayfeedback "0.2"
+# room "0.1"
+
+hush

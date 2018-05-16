@@ -1,0 +1,5 @@
+d1 $ someCycles (# up 3) $ whenmod 3 4 (fast 3) $ stut' 4 (0.125/4) (# speed "0.7") $ jux rev $ every 3 (slow 2) $ every 4 (0.25 <~) $ slow 2 $ sound "kyonb*8" # n (irand 110) # vowel "o" # pan (scale 0.0 1.0 sine)
+
+d2 $ foldEvery [4,8] (# speed 2) $ someCycles (# speed "0.5") $ every 3 (0.25 <~) $ sound "kyonm*4" # n (irand 20) # pan (scale 0.0 1.0 rand)
+
+hush

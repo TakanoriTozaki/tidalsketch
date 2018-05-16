@@ -1,0 +1,14 @@
+-- パターン内全てのイベントを変換したい場合もある
+d1 $ sound "bd*2 [bd [sn sn*2 sn] sn] sn"
+# speed ((*1.5) <$> sine)
+
+-- Tidal 0.9以降は直接算術演算を行うことができる
+-- # speed (*2sine) 逆にこれはできない
+d1 $ sound "bd*2 [bd [sn sn*2 sn] sn] sn"
+# speed (sine*2)
+
+d1 $ brak $ sound "bd*2 [bd [sn sn*2 sn] sn] sn"
+
+d1 $ sound "bd*6 [bd*2 [sn sn*3 sn] sn] sn"
+
+hush

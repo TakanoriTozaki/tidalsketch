@@ -1,0 +1,13 @@
+d1
+$ every 2 (0.25 <~)
+$ stack [
+s (samples "breaks125*8" (run 8)),
+]
+# n (irand 30)
+# pan (slow 4 $ saw)
+# gain (slow 4 $ sine)
+
+hush
+
+--pattern003.tidal
+--Create pattern003

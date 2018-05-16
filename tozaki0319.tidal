@@ -1,0 +1,95 @@
+bps (100/120)
+
+d1
+ $ every 1 (|=| speed "2")
+ $ every 2 (|=| speed "3")
+ $ every 3 (|=| speed "4")
+ $ every 4 (|=| speed "5")
+ $ every 5 (|=| speed "6")
+ $ every 6 (|=| speed "7")
+ $ every 7 (|=| speed "8")
+ $ every 8 (|=| speed "9")
+ $ every 9 (|=| speed "10")
+ $ every 10 (|=| speed "11")
+ $ every 11 (|=| speed "12")
+ $ every 12 (|=| speed "13")
+ $ every 13 (|=| speed "14")
+ $ every 14 (|=| speed "15")
+ $ every 15 (|=| speed "16")
+ $ every 16 (|=| speed "17")
+ $ every 17 (|=| speed "18")
+ $ every 18 (|=| speed "19")
+ $ every 19 (|=| speed "20")
+ $ every 20 (|=| speed "21")
+ $ every 21 (|=| speed "22")
+ $ every 22 (|=| speed "23")
+ $ every 23 (|=| speed "24")
+ $ every 24 (|=| speed "25")
+ $ every 25 (|=| speed "26")
+ -- $ rev
+-- $ jux (iter 5)
+ $ stack[
+-- sound "sn sn sn sn sn"
+-- sound "sn sn sn sn sn sn sn sn sn sn"
+sound "sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn"
+-- sound "sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn"
+-- sound "sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn"
+-- sound "sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn sn"
+-- sound "sn*25"
+-- sound "sn ~ ~ ~ ~"
+-- sound "sn ~ ~ ~ ~ sn ~ ~ ~ ~"
+-- sound "sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~"
+-- sound "sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~"
+-- sound "sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~"
+-- sound "sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~"
+-- sound "sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~"
+-- sound "sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~ sn ~ ~ ~ ~"
+-- sound "sn sn ~ ~ ~"
+-- sound "sn sn ~ ~ ~ sn sn ~ ~ ~"
+-- sound "sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~"
+-- sound "sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~sn sn ~ ~ ~"
+-- sound "sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~"
+-- sound "sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~"
+-- sound "sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~ sn sn ~ ~ ~"
+-- sound "sn sn sn ~ ~"
+-- sound "sn sn sn ~ ~ sn sn sn ~ ~"
+-- sound "sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~"
+-- sound "sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~"
+-- sound "sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~"
+-- sound "sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~"
+-- sound "sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~ sn sn sn ~ ~"
+-- sound "sn sn sn sn ~"
+-- sound "sn sn sn sn ~ sn sn sn sn ~"
+-- sound "sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~"
+-- sound "sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~"
+-- sound "sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~"
+-- sound "sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~"
+-- sound "sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~"
+-- sound "sn ~ sn ~ ~"
+-- sound "sn ~ sn ~ ~ sn ~ sn ~ ~"
+-- sound "sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~"
+-- sound "sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~"
+-- sound "sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~"
+-- sound "sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~"
+-- sound "sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~ sn ~ sn ~ ~"
+-- sound "sn ~ sn sn ~"
+-- sound "sn ~ sn sn ~ sn ~ sn sn ~"
+-- sound "sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~"
+-- sound "sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~"
+-- sound "sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ "
+-- sound "sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~"
+-- sound "sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~ sn ~ sn sn ~"
+-- sound "sn ~ sn sn sn"
+-- sound "sn ~ sn sn sn sn ~ sn sn sn"
+-- sound "sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn"
+-- sound "sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn"
+-- sound "sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn"
+-- sound "sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn"
+-- sound "sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn sn ~ sn sn sn"
+ ]
+ # n (run 25)
+ -- # delay "0.25"
+ -- # delaytime "0.125"
+ -- # delayfeedback "0.25"
+
+hush

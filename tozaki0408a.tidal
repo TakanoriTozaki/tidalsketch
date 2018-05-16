@@ -1,0 +1,12 @@
+d1 $ sound "kyonm:0*2 kyonba" # n (run 8)
+# pan (scale 0.0 1.0 sine)
+# gain (scale 0.99 1.0 rand)
+# delay "0.0"
+# delayfeedback "0.0"
+# delaytime "0.0"
+# room "0.0"
+# speed "1.0"
+# shape (scale 0.001 0.125 sine)
+-- # vowel "[a, i, i, i]"
+
+hush

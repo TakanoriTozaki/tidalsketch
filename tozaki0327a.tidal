@@ -1,0 +1,23 @@
+d1 $ sound "[numbers, ifdrums [cp [cp cp] cp] bd]/4" # slow 8 (vowel "a e o")
+# n (irand 30)
+# pan (slowcat [sine, saw, square, tri])
+# gain (scale 0.75 1.0 $ saw)
+
+t1 anticipate $ spread ($) [fast 2, rev, slow 2, striate 3, (# speed "0.3"), (# pan (slow 8 $ saw))] $ sound "[numbers? [idrums*2 [cp? ho:3] ho]*2 ifdrums]*8" # gain "0.8 1.0 0.75 1.0"
+
+d2 $ jux (# accelerate "-0.1") $ sound "supermandolin(8, 8)" # midinote "[80!8 78]/8"
+
+t2 anticipate $ sound "supermandolin(8, 16)" # midinote "[76, 74]"
+
+d1 $ spread ($) [fast 2, rev, striate 3] $ sound "ifdrums(2, 8) cp(1, 4)" # gain "0.8 1.0 0.75 1.0"
+
+d1 $ sound (samples "ifdrums(4, 16)" (iter 4 $ run 10))
+
+t1 anticipate $ sound (samples "bd(3, 8)" (run 10))
+
+t1 (xfadeIn 16) $ sound "ifdrams(5, 8)"
+# n (irand 4)
+# gain "1.0 0.75 0.1"
+# pan (slow 8 $ sine)
+
+hush

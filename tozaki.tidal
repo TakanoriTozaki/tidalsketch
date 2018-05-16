@@ -1,0 +1,51 @@
+d1
+ $ every 4 (gap 4)
+ $ every 3 (|=| coarse "16 32 24")
+ $ every 1 (|=| accelerate "-0.5 0.5")
+ -- $ sometimes (fast 4)
+ -- $ rarely (|=| begin "0.5")
+ -- $ sometimes (0.2 ~>)
+ $ stack [
+ sound "bd(3, 8)",
+ sound "sn*8"
+]
+ |=| delaytime "0.25"
+ |=| delayfeedback "0.5"
+
+d2
+ $ sometimes (gap 4) $ jux (iter 4)
+ $ every 3 (# coarse "16 32 24")
+ $ every 4 (rev)
+ $ stack[
+ sound "{bass bass, bass bass bass}",
+ sound "{cp, ~ ~ ~}"
+ ]
+ # n (irand 4)
+ # delaytime "0.5"
+
+ d3
+ $ sound "arpy*8"
+ # nudge (scale 0 8 $ sine)
+
+ d4
+ $ spaceOut [1, 2, 0.5]
+ $ stut 2 0.5 0.25
+ $ sound "cp*4 cp*2"
+
+d1 $ spread slow [6,4/3] $ jux (iter 8) $ every 4 rev $ sound "[bd*6 [sn*3 bd*2] [bd*4 sn] [sn*6]]"
+ |+| speed ((+1.4) <$> slow 1 sinewave1)
+ |+| speed ((*0.5) <$> slow 2 sinewave1)
+ |+| resonance ((*0.5) <$> slow 3 sinewave1)
+
+d1 $ spread ($) [slow "{2 3 1}"]
+$ jux (iter 8)
+$ every 4 rev
+$ sound "[bd*6 [sn*3 sn2] [bd*4 sn] [sn*6]]"
+ # speed ((+1.5) $ slow 1 sinewave1)
+ # cutoff ((+3000) $ slow 2 sinewave1)
+ # resonance ((+0.5) $ slow 3 sinewave1)
+
+
+d1 $ sound "bd"
+
+hush

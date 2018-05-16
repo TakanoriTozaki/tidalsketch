@@ -1,0 +1,51 @@
+let brakk samps = ((|=| unit "c") . (|=| speed "8")) $ sound (samples samps (irand 30))
+
+let rip a b p = within (0.25, 0.75) (slow 2 . rev .stut 8 a b) p
+
+let pat = "{1 ~ ~ 1 1*1 1 ~ 1 1}%8"
+
+bps (2500/120)
+
+d1
+$ whenmod 16 8 (# speed "1.75 2.0")
+$ every 4 (rev)
+$ every 3 (# speed 4)
+$ every 5 (# crush 3)
+$ every 7 (rip 0.25 0.75)
+$ stack [
+every 3 (# speed 2) $ "[0 0.125]" <~ s (samples "{drum, arpy cp hh}%8" (run 10)) # n (irand 30) # gain (sine),
+(0.25 <~) $ s (samples "{~ ~, cp casio}%8" (run 10)) # n (irand 30) # crush (irand 5) # sustain "0 1.5 0.75" # voice "0.5",
+sometimesBy 0.25 (# up 8) $ (0.125 <~) $ s (samples "{drum, arpy cp hh}%8" (run 10)) # n (irand 30) # speed (scale 1 2 $ slow 8 $ saw) # crush (irand 3),
+(0.25 <~) $ s (samples "{future future:2 future:3 future:4}%8" (run 10)) # n (irand 30),
+brakk (samples "{cp, cp:1 cp:2 cp:3}%8" (run 10)) # n (irand 30) # pan (slow 8 $ sine),
+every 3 (0.125 <~) $ "[0 0.25]/4" <~ s (samples "{drum, arpy, cp hh}%8" (run 10)) # n (irand 30) # pan (scale 0.25 0.75 $ rand) # cutoff (scale 500 5000 $ slow 4 $ sine)
+-- n "2 5 2 5 2 5 2 7" # s "supersaw" # gain "0.95" # velocity "0.4 0.2 0.4 0.2 0.4" # voice (slow 4 "0.6 0.5 0.4 0.3 0.2 0.1 0.2 0.3") # slide "[0 0.5]/8" # speed "-4"
+]
+
+d2 $ sound (samples "arpy*8" (slow 1.0 $ run 30))
+# crush "3"
+# delay "0.5"
+# delaytime "0.03"
+# decay "0.1"
+# sustain "0.15"
+# room "0.1"
+# speed "0.5"
+# pan (slow 5 $ saw)
+# gain (slow 2 $ "[0.75 [0.95 0.85] [1.0 0.9] 0.75]")
+
+d3 $ whenmod 8 6 (const $ s (samples "{arpy, cp arpy hh}%8" (run 10)) # n (irand 5))
+$ whenmod 16 6 (rev)
+$ every 5 (|+| speed "0.5")
+$ every 4 (0.25 <~)
+$ every 3 (rev)
+$ "[0 0.5]/2" <~ s (samples "{arpy, arpy cp hh}%8" (run 10)) # n (irand 30)
+# speed "[1 1.25 0.75 -1.5]/3"
+# pan (slow 2 $ sine)
+
+d4 $ s (samples "{drum arpy cp hh}%8" (run 10)) # cutoff (scale 100 1000 $ slow 4 $ saw) # resonance "0.5" # gain (pat)
+
+d5 $ s (samples "{arpy arpy:1 arpy:2 arpy:3}%8" (run 10)) # n (irand 10) # speed (0.5) # gain (sine)
+
+hush
+
+Thank you !!!!!

@@ -1,0 +1,13 @@
+d1 $ every 2 (0.25 <~)
+$ every 4 (0.25 <~)
+$ every 3 (0.25 <~)
+$ stack[
+sound "[[odx*2 [odx/6 mt*2]] [odx/1 odx] [odx*3 [mt*2]] [odx/3 odx/6 ~ odx/1]]",
+every 4 rev $ sound (samples "pluck*8" (run 8))
+# shape "0.3"
+]
+# speed "[[1 0.8] 1 1.5 1]"
+# up "5 2 5 2"
+
+--pattern002.tidal
+--Create pattern002

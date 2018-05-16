@@ -1,0 +1,8 @@
+d1 $ chop 2 $ jux (iter 4) $ foldEvery [3, 4, 5] (fast 2) $ within (0, 0.5) (fast 2) $ whenmod 16 4 (# speed "2") $ degrade $ slow 3 $ spin 4 $ every 3 (0.25 <~) $ s (samples "[arpy arpy:2, arpy:3 arpy:4]*2" (run 8)) # n (irand 10)
+# pan (scale 0 1000 $ slow 10 rand)
+# gain (scale 0.9 1.0 $ slow 8 $ sine)
+# nudge (scale 0.0 1.0 rand)
+
+
+
+hush

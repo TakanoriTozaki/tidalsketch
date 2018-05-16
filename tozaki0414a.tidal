@@ -1,0 +1,5 @@
+t1 $ foldEvery [3,4] (slow 2) $ stut' 8 (0.125/4) (# up 3) $ every 6 (chop 3) $ whenmod 6 3 (fast 2) $ slow 4 $ spin 2 $ (0.25 <~) $ jux (iter 8) $ every 5 (slow 2) $ slow 4 $ sound "tozas" # n (sine * 2) # speed (scale 5.0 30.0 $ sine)
+
+t2 $ foldEvery [3,4] (slow 4) $ slow 3 $ spin 3 $ whenmod 8 4 (slow 2) $ stut' 3 (125/4) (# up "1 2 4") $ jux (iter 4) $ every 5 (# crush 2) $ every 6 (fast 3) $ every 2 (0.25 <~) $ n "~ 1(3,8,<0 1>) ~ 0*8" # sound "tozab2:8" # legato 1.0 # speed 3 # vowel "a i i" # lpf 8000 # lpq "0.1 0.3"
+
+hush

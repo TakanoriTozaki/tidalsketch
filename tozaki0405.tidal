@@ -1,0 +1,13 @@
+d1 $ stack [
+sound "kyonb*8" # n (irand 30)
+]
+# pan (scale 0.0 1.0 rand)
+# pan (scale 0.0 1.0 $ slow 1 $ sine)
+# gain (scale 0.99 1.0 $ slow 2 $ sine)
+# delay "0.1"
+# delayfeedback "0.0"
+# delaytime "0.0"
+# room "0.1"
+# speed "1"
+# shape (scale 0.1 0.5 rand)
+# vowel "[a, i, e, o]"

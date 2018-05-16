@@ -1,0 +1,6 @@
+solo $
+t1 $ foldEvery [3,4] (# speed "3") $ whenmod 6 3 (slow 3) $ stut' 4 (125/4) (# up 2) $ sound "tozab*8" # n (irand 2) # pan (scale 0.0 1.0 $ fast 3 $ sine) # gain (scale 0.8 1.0 $ fast 4 $ sine) # speed (scale 0.0 1.0 $ fast 5 $ sine) # delay (scale 0.0 1.0 $ fast 6 $ sine) # delayfeedback (scale 0.0 1.0 $ fast 2 $ sine) # vowel "a i"
+
+t2 $ whenmod 8 4 (iter 4) $ stut' 8 (125/4) (# up 2) $ every 5 (chop 4) $ jux (slow 3) $ every 2 (0.125 <~) $ every 3 (0.25 <~) $ every 4 (0.5 <~) $ sound "tozabb(3,8,<0 1>)" # n (irand 2)
+
+hush

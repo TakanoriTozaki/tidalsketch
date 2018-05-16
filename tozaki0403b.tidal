@@ -1,0 +1,12 @@
+d1 $ sound "kyonb*8" # n (irand 8)
+# pan (scale 0.0 0.01 $ slow 1 $ sine)
+# pan (scale 0.0 1.0 $ slow 2 $ sine)
+# gain (scale 0.99 1.0 $ slow 2 $ sine)
+# delay (scale 0.0 1.0 $ slow 1 $ saw)
+# delay (scale 0.0 2.0 $ slow 3 $ sine)
+# delayfeedback (scale 0.0 1.0 rand)
+# room "0.1"
+# speed "2"
+# shape "0.01"
+
+hush

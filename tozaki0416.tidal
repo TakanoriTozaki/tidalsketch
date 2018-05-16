@@ -1,0 +1,6 @@
+t1 $ foldEvery [3,4] (# speed 2) $ whenmod 6 3 (# up "2 4") $ slow 4 $ spin 3 $ someCycles (slow 2) $ stut' 4 (0.125/4) (# up 2) $ jux (iter 2) $ every 2 (# speed 2) $ every 2 (slow 2) $ every 3 (0.25 <~) $ sound "tozab(3,8,<0 1>)" # speed "1.0" # pan (scale 0.0 1.0 $ sine)
+
+solo $
+t2 $ stut' 4 (0.125/4) (slow 4) $ every 3 (# up "3")$ jux (iter 4) $ sound "tozas" # gain "0.9" # pan (scale 0.001 0.01 rand)
+
+hush

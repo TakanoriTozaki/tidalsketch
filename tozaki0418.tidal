@@ -1,0 +1,7 @@
+t1 $ every 3 (slow 2) $ (0.25 <~) $ slow 5 $ pan "1.0 0.0 0.75 0.5" # sound "tozas" # gain "0.9"
+
+t2 $ stut' 3 (0.125/4) (slow 2) $ every 4 (# up 2) $ slow 5 $ speed "1.0 0.5 0.75 0.0" # sound "tozas" # gain "0.9"
+
+t3 $ whenmod 6 3 (slow 3) $ slow 4 $ spin 3 $ every 4 (slow 3) $ n "2 2 3 3 4 4" # sound "tozas" # gain "0.9"
+
+hush

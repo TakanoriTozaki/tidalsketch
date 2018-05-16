@@ -1,0 +1,8 @@
+d1 $ foldEvery [3, 4] (iter 4) $ stack [
+ whenmod 16 2 (iter 4) $ slow 4 $ spin 2 $ every 2 (0.25 <~) $ every 4 (fast 2) $ every 3 (slow 2) $ sound "tozab*8" # n (irand 4) # delayfeedback "0.0",
+sound "kyonm*2" # n (irand 2) # pan (scale 0.0 1.0 rand) # shape (scale 0.1 0.7 rand)
+]
+
+
+
+hush

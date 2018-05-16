@@ -1,0 +1,1 @@
+t1 $ foldEvery [3,4] (chop 3) $ jux (iter 4) $ whenmod 6 3 (# speed 2) $ slow 2 $ stut' 4 (0.125/4) (# up 2) $ every 3 (0.25 <~) $ sound "tozabb*8 tozab*4" # n (irand 5) # pan (scale 0.0 1.0 rand) # delay 0.2

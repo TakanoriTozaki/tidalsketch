@@ -1,0 +1,18 @@
+d1 $ foldEvery [4,2] (# speed "1.0 1.5 2.0") $ slow 2 $ spin 3 $ stack [
+whenmod 4 2 (iter 4) $ sound "kyond:6(3,8)",
+slow 4 $ spin 3 $ sound "kyonb*8" # n (run 8) # crush 4,
+jux (iter 4) $ every 3 (# up "2 4 6 8") $ sound "[kyonb, [kyonb:2 [kyonb:5 kyonb, kyonb:3 kyonb:5] kyonb:3] kyonb:2]",
+sound "kyonm:1*2"
+]
+# pan (scale 0.0 1.0 sine)
+# gain (scale 0.99 1.0 rand)
+# delay "0.0"
+# delayfeedback "1.0"
+# delaytime "0.0"
+# room "0.0"
+# speed "1.0"
+# shape (scale 0.001 0.125 sine)
+-- # vowel "[a, i, i, i]"
+
+hush
+  

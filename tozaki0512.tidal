@@ -1,0 +1,42 @@
+t1 $ stack[
+note (off 0.125 (+12) $ off 0.25 (+7) $ "<c(3,8) e*2 f(3,8,2) g*2>") # sound "~  tozabd:1"
+# gain 0.85
+# legato 4
+# lpf 8000
+# lpq 0.2
+# orbit 1
+# room 0.3,
+sound "tozabb*2(3,8,<0 1>)" # n "1 1 0 1",
+every 4 (0.25 <~) $ sound "tozabb(5,8)" # n "30 30 30 30"
+]
+# pan (scale 0.2 0.70 rand)
+# speed (scale 1.0 10.0 sine)
+# delay (scale 0.1 1.0 square)
+# delayfeedback (scale 0.1 1.0 sine)
+
+t2 $ stack[
+-- note (off 0.125 (+12) $ off 0.25 (+7) $ "<c(3,8) e*2 f(3,8,2) g*2>") # sound "~  tozabd:1"
+-- # gain 0.85
+-- # legato 4
+-- # lpf 3000
+-- # lpq 0.2
+-- # orbit 1
+-- # room 0.3,
+sound "tozabb*2(3,8,<0 1>)" # n "1 1 0 1",
+every 4 (0.25 <~) $ sound "tozabb(5,8)" # n "30 30 30 30"
+]
+
+t3 $ off 0.25 (slow "<1 4>") $ jux rev $ iter 4 $ chop 8 $ sound "~ tozaba:2*2" # gain "1.0"
+
+t4 $ whenmod 32 6 (iter 4) $ loopAt 2 $ chop 8 $ sound "tozabh:2"
+ # gain "1.5"
+ # legato "<0.25 ~ ~>"
+ # lpf 3000
+ # lpq 0.2
+ # orbit 1
+ # room 0.3
+
+t5 $ stut' 4 (0.125/4) (# speed "<1.0 2.0>") $ sound "tozabb*8" # n (irand 10) # pan (scale 0.0 0.5 sine) # delay (scale 0.0 0.5 sine) # delayfeedback (scale 0.0 1.0 $ slow 5 $ saw) # speed (scale 1.0 10.0 $ slow 2 $ saw) # gain "0.75"
+
+
+hush

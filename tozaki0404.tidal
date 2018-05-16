@@ -1,0 +1,25 @@
+d1 $ stack [
+sound "kyoma" # n (irand 9) # gain (scale 0.9 1.0 $ slow 9 $ sine) # pan (scale 0 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine),
+sound "kyoma" # n (irand 9) # gain (scale 0.8 1.0 $ slow 8 $ sine) # pan (scale 0 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine),
+sound "kyoma" # n (irand 9) # gain (scale 0.7 1.0 $ slow 7 $ sine) # pan (scale 0 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine),
+sound "kyoma"  # n (irand 9) # gain (scale 0.6 1.0 $ slow 6 $ sine) # pan (scale 50 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine),
+sound "kyoma" # n (irand 5) # gain (scale 0.5 1.0 $ slow 5 $ sine) # pan (scale 50 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine),
+sound "kyoma" # n (irand 3) # gain (scale 0.4 1.0 $ slow 4 $ sine) # pan (scale 50 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine),
+sound "kyoma" # n (irand 3) # gain (scale 0.3 1.0 $ slow 3 $ sine) # pan (scale 50 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine),
+sound "kyoma" # n (irand 5) # gain (scale 0.2 1.0 $ slow 2 $ sine) # pan (scale 50 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine),
+sound "kyoma" # n (irand 4) # gain (scale 0.1 1.0 $ slow 1 $ sine) # pan (scale 50 100 $ slow 10 rand) # nudge (scale 0.9 1.0 $ sine)
+]
+
+d1 $ stut 4 0.5 0.2 $ gap "<8 16 8>" $ zoom (0.25, 0.75) $ spread slow [2,4/3] $ striate 3 $ smash 2 [2,3,4] $ linger 0.25 $ jux ((# speed "0.5")) $ iter 2 $ chop 3 $ palindrome $ degrade $ slow 2 $ spin 2 $ s "[kyoma:5 ~ kyoma:3 ~ ~, kyoma:2 ~ kyoma:3]" # n (irand 10)
+# pan (scale 0 1000 $ slow 10 rand)
+# gain (scale 0.9 1.0 $ slow 8 $ sine)
+# nudge (scale 0.0 1.0 rand)
+# accelerate "-8"
+# fast 4 (vowel "a e o")
+
+# gain (scale 0 1 rand)
+# pan "0.5"
+
+cps 1.0
+
+hush

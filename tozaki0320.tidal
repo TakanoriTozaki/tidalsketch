@@ -1,0 +1,66 @@
+d1 $ stack [
+sound "bd(3,8)",
+(0.5 <~) $ sound "cp",
+every 2 (density 2) $ (0.25 <~) $ sound "arpy*2"
+]
+
+d1 $ every 3 (rev) $
+every 4 (chop 4) $
+stack [
+sound "bd(3, 8)",
+(0.5 <~) $ sound "cp",
+every 2 (density 2) $ (0.25 <~) $ sound "arpy*2"
+]
+
+d1 $ foldEvery [3, 4] (0.25 <~) $
+every 3 (rev) $
+every 4 (chop 4) $
+stack [
+sound "bd(3, 8)",
+(0.5 <~) $ sound "cp",
+every 2 (density 2) $ (0.25 <~) $ sound "arpy*2"
+]
+
+d1 $ every 3 (0.5 <~) $
+every 4 (chop 4) $
+every 5 (# speed "1.5 -1 0.5") $
+every 6 (# crush (scale 3 8 $ slow 2 tri)) $
+every 7 (rev) $
+stack [
+sound "bd(3, 8)",
+sound "cp*2"
+]
+
+d1 $ sound "{bd ~ ~ bd ~}%4"
+
+d2 $ sound "clak*8"
+
+let pat = "{1 ~ ~ 1 ~ 1*1 1 ~ ~ 1 1}%4"
+
+d1 $ gain (pat) # s "bd"
+
+d2 $ gain (pat) # s "arpy"
+
+do
+	let pat = "{1 ~ ~ 1 ~ 1*2 1 ~ ~ 1 1}%8"
+	d1 $ gain (pat) # s "bd"
+	d2 $ gain (pat) # s "arpy"
+
+let rip a b p = within (0.25, 0.75) (slow 2 . rev .stut 8 a b) p
+
+d1 $ every 2 (rip 0.5 0.2) $
+every 3 (rip 0.25 0.125) $
+every 4 (rip 0.25 0.5) $
+sound "bd*8"
+
+let brakk samps = ((|=| unit "c") . (|=| speed "8")) $ sound (samples samps (irand 10))
+
+d1 $ every 3 (rip 0.25 0.125) $
+stack [
+brakk "arpy*8",s
+brakk "future*8",
+brakk "clak*8",
+sound "bd*8"
+]
+
+hush

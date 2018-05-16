@@ -1,0 +1,29 @@
+solo $
+t1 $ sound "tozaba*5" # n "<1 0 1 0 1 0 1 0>" # pan "<0.0 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0>" # speed "0.0 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0" # delay "<0.0>" # legato "<0.2>"
+
+solo $
+t2 $ sound "tozaba*5" # n "<2 2 2 2 0 2 0 2>" # pan  square # speed sine # delay "<0.0>" # lpf 5000 # lpq 0.0
+
+solo $
+t3 $ sound "tozaba*10" # n "<1 1 1 1 3 3 3 4>" # pan (scale 0.0 1.0 $ slow "<5>" $ sine) # speed (scale 1.0 10.0 $ slow "<5>" $ tri)  # delay (scale 0.1 0.2 $ slow "<5>" $ sine)
+
+solo $
+t4 $ sound "tozaba*10" # n "<0 1 2 3 4 5 6 7 8 9 10>" # pan (scale 0.0 1.0 $ slow "<5>" $ sine) # speed (scale 1.0 10.0 $ slow "<5>" $ tri) # delay (scale 0.0 1.0 $ slow "<5>" $ saw) # delayfeedback (scale 0.0 1.0 sine)
+
+solo $
+t5 $ sound "tozabc*10" # n (irand 10) # pan (scale 0.1 1.0 $ slow "<5>" $ saw) # speed (scale 1.0 10.0 $ slow 5 $ sine) # delay (scale 0.1 1.0 rand) # delayfeedback (scale 0.1 1.0 $ slow "<1 2 3 4 5 6 7 8 9 10>" $ saw) # legato "<1.0>"
+
+solo $
+t6 $ whenmod 5 2 (# up "<2 5>") $ stut' 3 (0.125/4) (# crush 2) $ every 2 (0.125 <~) $ sound "tozabc(5,3,<0 1>)" # n "<0 1 2 3 4 5 6 7>" # pan (scale 0.0 1.0 $ slow "<2 4>" $ sine) # speed (scale 9.5 10.0 $ slow "2" $ saw) # delay (scale 0.1 1.0 rand) # delayfeedback "0.1" # legato "<0.2>"
+
+
+solo $
+t7 $ stack [every 16 (const $ sound "tozaba:1*4 tozaba:3*4") $ whenmod 32 8 (const (sound "tozabe:1(3,8)")) $ sound "tozabe(2,4)" # n "<0>" # pan (scale 0.5 0.5 sine) # speed (scale 1.0 1.125 saw) # delay (scale 0.0 1.0 sine) # delayfeedback (scale 0.0 1.0 square),
+sound "tozabf*4" # n "<4>" # gain "0.75" # pan (scale 0.0 1.0 sine) # speed (scale 1.0 2.0 $ slow "<5>" $ sine),
+sound "tozabf(2,8)" # n "<5>" # gain "0.75" # delay (scale 0.1 0.125 rand) # speed "<1.0 3.0>",
+sound "tozabf(3,8)" # n "<6>" # gain "0.75" # speed (scale 1.0 1.0 sine) # lpf "<200 8000>",
+every 2 (rev) $ every 3 (0.25 <~) $ every 4 (0.5 <~) $ sound "tozabf(4,8)" # n "<7>" # gain "<0.75>" # speed "<1.0 1.25 1.25 1.5 2.0>",
+stut' 5 (125/5) (slow 2) $ every 4 (# up "<2.0 4.0>") $ every 5 (rev) $ sound "tozabf*4" # n "<10>" # gain "<0.75>" # speed (scale 1.0 5.0 $ slow "<5>" $ sine) # delay "<0.1 0.2>"
+]
+
+hush

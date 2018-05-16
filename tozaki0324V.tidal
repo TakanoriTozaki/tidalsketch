@@ -1,0 +1,48 @@
+
+let brakk samps = ((|=| unit "c") . (|=| speed "8")) $ sound (samples samps (irand 30))
+
+let brakk1 samps = ((|=| unit "c") . (|=| speed "16")) $ sound (samples samps (irand 30))
+
+let rip a b p = within (0.25, 0.75) (slow 2 . rev .stut 8 a b) p
+
+let pat = "{1 ~ ~ 1 1*1 1 ~ 1 1}%8"
+
+bps (220/120)
+
+d1 $ whenmod 8 6 (# speed "1.75 2.0") $
+every 4 (rev) $
+every 3 (# speed 4) $
+every 5 (# crush 3) $
+every 7 (rip 0.25 0.75) $
+stack [
+(0.125 <~) $ s (samples "{future future:2 future:3 future:4}%8" (run 10)) # n (irand 30),
+n "2 5 2 5 2 5 2 7" # s "mam" # gain "1.0" # velocity "0.4 0.2 0.4 0.2 0.4" # voice (slow 4 "0.6 0.5 0.4 0.3 0.2 0.1 0.2 0.3") # slide "[0 0.5]/8" # speed "1"
+]
+
+d1 $
+sound (samples "mam*4" (slow 1.0 $ run 30))
+# crush 3
+# delay "0.5"
+# delaytime "0.03"
+# decay "0.1"
+# sustain "0.15"
+# room "0.1"
+# speed "1"
+# gain "0.8"
+
+solo $
+d3 $ whenmod 8 6 (const $ s (samples "{luka1, luka1 luka1 luka1}%8" (run 30)) # n (irand 30))
+$ whenmod 8 6 (rev) $
+every 5 (|+| speed "0.5") $
+every 4 (0.25 <~) $
+every 3 (rev) $ "[0 0.5]/2" <~ s (samples "{mam, mam mam mam}%8" (run 10)) # n (irand 30)
+# speed "[1 1.25 0.75 -1.5]/3"
+# pan (slow 4 $ tri)
+
+d4 $ s (samples "{luka1 luka1 luka1 luka1}%8" (run 20)) # n (irand 30) # speed "-4"
+
+d5 $ s (samples "{luka luka luka luka}%8" (run 10)) # n (irand 10) # speed (0.5) # gain "1.0"
+
+d1 $ "bd"
+
+hush

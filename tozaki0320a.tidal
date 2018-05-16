@@ -1,0 +1,50 @@
+-- kindonm original code
+let pat = "{1 ~ ~ 1 1*1 1 ~ 1}%8"
+
+let rip a b p = within (0.25, 0.75) (slow 2 . rev .stut 8 a b) p
+
+let brakk samps = ((|=| unit "c") . (|=| speed "8")) $ sound (samples samps (irand 30))
+
+d1 $ every 2 (rip 0.25 0.125) $
+every 3 (rip 0.25 0.125) $
+every 4 (density 0.5) $
+stack [
+brakk "arpy*8" # gain (pat),
+brakk "arpy:2(3, 8)" # crush "4",
+brakk "arpy:5(3, 8)" # speed (pat),
+brakk "clak*8" # gain (pat),
+brakk "future*8"
+]
+
+d1 $ foldEvery [3, 8] (0.25 <~) $
+every 2 (rev) $
+every 3 (# crush (scale 3 8 $ slow 2 tri)) $
+every 4 (chop 4) $
+stack [
+sound "bd(3, 8)",
+(0.25 <~) $ sound "cp",
+every 2 (density 2) $ (0.25 <~) $ sound "arpy*4"
+]
+
+d1 $ foldEvery [3, 8] (0.25 <~) $
+every 2 (# speed "0.5 -1 0.2 0.5") $
+every 3 (rev) $
+every 4 (# crush (scale 3 8 $ slow 2 tri)) $
+every 5 (chop 4) $
+stack [
+(0.25 <~) $ sound "bd*2",
+every 4 (density 4) $ sound "cp*2",
+every 2 (density 2) $ (0.25 <~) $ sound "arpy*4"
+]
+
+d1 $ every 2 (rip 0.25 0.125) $
+every 3 (density 2) $
+every 4 (# crush (scale 3 8 $ slow 2 tri)) $
+every 5 (chop 4) $
+stack [
+every 2 (chop "4") $ (0.25 <~) $ sound "bd*2",
+every 3 (density 4) $ (0.125 <~) $ sound "cp*2",
+every 2 (# speed "0.5 -1 0.5 -1 0.5") $ every 3 (rev) $ every 4 (# crush (scale 3 8 $ slow 2 tri)) $ sound "arpy*2"
+]
+
+hush

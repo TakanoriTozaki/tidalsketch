@@ -1,0 +1,42 @@
+let luka samps = ((|=| unit "c") . (|=| speed "8")) $ sound (samples samps (irand 30))
+
+let luka1 samps = ((|=| unit "c") . (|=| speed "16")) $ sound (samples samps (irand 30))
+
+let luka2 samps = ((|=| unit "c") . (|=| speed "3") $ sound (samples samps (irand 30))
+
+let pat = "{1 ~ ~ 1 1*2 1 ~ 1}%8"
+
+let pat1 = "{~ 1 ~ 1 1*2 1 ~ 1}%8"
+
+let pat2 = "{0 0.5 1 0.5 1 ~ 1}%8"
+
+bps (240/120)
+
+d1 $ stack [
+whenmod 8 6 (rev) $ rarely (# crush 4) $ jux (iter 8) $ sound (samples "arpy ~ ~ ~" (run 30)),
+whenmod 16 4 (const $ luka2 "cp*8") $ rarely (# crush 4) $ jux (iter 8) $ sound (samples "arpy ~ ~ ~" (run 30)),
+every 2 (# speed "-1") $ sound "casio" |=| gain (pat),
+slowcat [luka1 "future*4"],
+luka "amencutup*8" |=| gain (pat) ,
+slowcat [luka2 "bassdm*4"] |=| gain (pat1),
+whenmod 16 4 (# crush 4) $ degrade $ sound (samples "{casio arpy casio casio arpy}%8" (run 30)) |=| gain (pat1) |=| pan (pat2),
+luka1 "future?*2" |=| crush 8,
+degradeBy 0.25 $ every 3 (0.5 <~) $ sound "future? future? future? future?",
+sometimesBy 0.25 (# crush 8) $ every 4 (0.5 <~) $ luka1 "future*4",
+(0.5 <~) $ luka2 "bass(3, 8)" |=| crush 3,
+(0.25 <~) $ luka1 "bassfoo*2",
+n "0 4 7 11 12 16 19 23" # s "supersaw" # gain "0.9" # velocity "0.4 0.2 0.4 0.5" # voice (slow 4 "0.3 0.2 0.1 0.0 0.2") # slide "[0 0.1]/8" # speed "-3"
+]
+# delay "0.5"
+# delaytime "0.03"
+# decay "0.1"
+# sustain "0.15"
+# room "0.1"
+
+hush
+
+-- OH HAI!!!!!
+
+-- I'm Tozaki
+
+-- Thank you !!!!!

@@ -1,0 +1,12 @@
+cps (120/120)
+
+d1
+$ stack [
+sound (samples "future(2,4) cp(2,4) kurt(2,4) psr" (run 4))
+]
+# n (irand 4)
+# nudge (scale 0.1 0.9 $ slow 16 sine)
+# pan "[0.1 [0.2 [0.3 [0.4 0.5 0.6] 0.7] 0.8] 0.9]"
+# gain (scale 0.9 1.0 $ slow 32 $ saw)
+
+hush

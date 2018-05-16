@@ -1,0 +1,14 @@
+d1 $ stack [
+sound "kyond"
+]
+# pan (scale 0.0 1.0 sine)
+# gain (scale 0.70 0.80 rand)
+# delay "0.0"
+# delayfeedback "1.0"
+# delaytime "0.0"
+# room "0.0"
+# speed "1.0"
+# shape (scale 0.025 0.125 sine)
+# vowel "[a, o, e, i]"
+
+hush

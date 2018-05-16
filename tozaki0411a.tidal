@@ -1,0 +1,5 @@
+d1 $ foldEvery [2,4] (# speed 2) $ off "<0.25 0.125 0.5>" (# lpf 0.5) $ someCycles (# up 3) $ jux rev $ every 3 (# crush 1) $ n "0(3,8,<0 1>)" # sound "tozab2" # legato (scale 1 0.5 $ sine) # speed 3 # vowel "a i o i" # lpf 1000 # lpq 0.3 # orbit 1 # room 0.1
+
+d2 $ n "1(3,8,<0 1>)" # sound "tozab2" # delayfeedback "1.0" # pan (scale 0.0 1.0 rand) # shape (scale 0.001 0.01 $ sine)
+
+hush

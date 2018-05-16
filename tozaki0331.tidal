@@ -1,0 +1,12 @@
+d1 $ stack [
+degrade $ off 0.25 (|+| n "<1 2>")
+$ chunk 4 (hurry 2) $ slow 2 $ juxBy 0.5 (0.25 <~) $ chop 8 $ sound "cp(3, 8,<0 2 4>)"
+# n (irand 9)
+# pan (scale 0 1000 $ slow 10 rand)
+# gain (scale 0.9 1.0 $ slow 8 $ sine)
+# nudge (scale 0.0 1.0 rand)
+# begin 0.2 # end 1
+# note "<0 ! ! ! ! ! ! ! ! 2>" # orbit 2 # room 0.3,
+juxBy 0.9 rev $ chunk 4 (hurry "<2 0.5>" $ sound "bd bd*8" # begin 0 # end 1,
+juxBy 0.25 (0.25 <~) $ stut 3 0.7 (2/3) $ n "c7 e7(3,8) f8 g6*2" # sound "arpy" # begin 0 # end 1 loopAt 4 $ (chop 32 $ sound "number" # pan sine)
+]

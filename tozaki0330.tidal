@@ -1,0 +1,8 @@
+d1 $ stut 4 0.5 0.2 $ gap "<32 16 8>" $ zoom (0.25, 0.75) $ spread slow [2,4/3] $ striate 3 $ smash 3 [2,3,4] $ linger 0.25 $ jux ((# speed "0.5")) $ iter 4 $ chop 4 $ palindrome $ degrade $ slow 2 $ spin 2 $ s "[arpy:5 ~ arpy:3 ~ ~, arpy:2 ~ arpy:3]*16" # n (irand 10)
+# pan (scale 0 1000 $ slow 10 rand)
+# gain (scale 0.9 1.0 $ slow 8 $ sine)
+# nudge (scale 0.0 1.0 rand)
+# accelerate "-8"
+# fast 4 (vowel "a e o")
+
+hush

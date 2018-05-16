@@ -1,0 +1,13 @@
+--スーパーダートオリジナル楽器
+
+d1 $ sound "mac*4" # n (irand 14)
+
+--n の意味が変わる音程が変わる
+d1 $ sound "supersaw" # n (irand 12)
+
+d1 $ sound "supergong" # n (irand 12)
+
+d1 $ sound "testsynth" # n (irand 12) # pan "0.75 0.15 0.75"
+
+
+hush

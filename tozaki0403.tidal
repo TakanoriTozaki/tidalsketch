@@ -1,0 +1,7 @@
+d1 $ sound "mam"
+# n (irand 1)
+# pan (scale 0 1.0 $ slow 4 rand)
+# gain (scale 0.75 1.0 $ slow 4 $ sine)
+# nudge (scale 0.0 1.0 rand)
+
+hush

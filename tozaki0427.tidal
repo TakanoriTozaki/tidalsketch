@@ -1,0 +1,5 @@
+t1 $ whenmod 6 3 (slow 2) $ foldEvery [3,4] (# crush 3) $ spin 3 $ every 2 (0.125 <~) $ every 3 (0.5 <~) $ every 4 (0.25 <~) $ sound "tozabb*8" # n "<1 1 2 2>" # pan (scale 0.0 1.0 sine) # speed (scale 0.1 1.0 saw) # delay "0.0" # legato "<1.0 0.5 0.2 1.0>"
+
+t2 $ sound "tozas" # gain (scale 0.7 0.9 sine) # pan "0.5 0.0 1.0" # speed (scale 0.0 1.0 sine) # delay sine # legato "<0.5 1.0 0.2>"
+
+hush
