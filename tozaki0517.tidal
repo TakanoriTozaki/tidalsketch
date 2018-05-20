@@ -1,0 +1,1 @@
+t1 $ jux rev $ stut' 3 (125/4) (slow 2) $ (0.25 <~) $ every 4 (slow "<3 6>") $ sound "tozaba*8" # n (irand 6) # pan (scale 0.5 0.5 $ slow 2 $ sine) # lpf 3000 # lpq 0.2 # room 0.1 # delay "0.2" # delayfeedback "0.25"

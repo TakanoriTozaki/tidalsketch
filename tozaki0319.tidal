@@ -1,6 +1,6 @@
-bps (100/120)
+bps (130/120)
 
-d1
+t1
  $ every 1 (|=| speed "2")
  $ every 2 (|=| speed "3")
  $ every 3 (|=| speed "4")

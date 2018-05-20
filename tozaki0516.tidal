@@ -1,1 +1,7 @@
-t1 $ sound "tozabb" # n (irand 2)
+t1 $ stack [every 2 (0.125 <~) $ every 4 (0.25 <~) $ sound "tozabb*8" # n (irand 4) # pan (scale 0.0 1.0 $ slow 5 $ sine) # delay (scale 0.1 0.5 rand),
+sound "tozaba*2",
+sound "~ tozabc*4",
+slow 4 $ sound "tozabh" # n "<3 3 4 4>"
+]
+
+hush
