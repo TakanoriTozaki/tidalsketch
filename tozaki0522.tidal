@@ -1,12 +1,12 @@
 t1 $ sound "tozabb*2" # gain 1.0 # n (irand 1)
 
-t2 $ every 4 (slow 2) $ sound "tozabd:3" # gain 1.0
+t2 $ whenmod 36 6 (iter 2) $ stut' 4 (125/5) (slow 2) $ every 3 (0.25 <~) $ every 4 (0.5 <~) $ every 4 (slow 2) $ sound "tozabd:3" # gain 1.0 # pan (scale 0.0 1.0 $ slow 2 $ rand) # legato "<0.5>"
 
-t3 $ jux rev $ every 4 (0.25 <~) $ sound "tozabe*8" # gain 0.75 # n (irand 2) # delay (scale 0.0 0.25 $ slow 2 $ saw) # delayfeedback (scale 0.5 0.75 $ slow 2 $ sine) # lpf "<500 1000 200>"
+t3 $ sound "tozabe*8" # gain 0.75 # n (irand 2) # delay (scale 0.0 0.25 $ slow 2 $ saw) # delayfeedback (scale 0.2 0.75 $ slow 2 $ sine) # lpf "<500 1000 200>"
 
-t4 $ stut' 3 (125/5) (# speed "<1 5>") $ every 4 (0.5 <~) $ sound "tozabe*8" # n (irand 3) # pan (scale 0.0 1.0 sine) # gain "<0.9 0.8 0.7 0.9>" # lpf 500 # lpq 0.1 # room 0.1 # legato "<0.5>"
+t4 $ stut' 3 (125/5) (# speed "<10 5>") $ every 4 (0.5 <~) $ sound "tozabe*8" # n (irand 30) # pan (scale 0.0 1.0 sine) # gain "<0.9 0.8 0.7 0.9>" # lpf "<500 1000>" # lpq 0.2 # legato "<0.5>"
 
-t5 $ slow 4 $ sound "tozabh" # n (irand 3) # gain "1.2" # lpf 2000 # lpq 0.2 # room 0.2 # vowel "a e i o u"
+t5 $ slow 4 $ sound "tozabh" # n (irand 3) # gain "1.2" # lpf 2000 # lpq 0.2 # room 0.2 # vowel "a e i o u" # speed "<1.0>"
 
 t6 $ jux (rev) $ whenmod 32 6 (iter 4) $ stut' 3 (125/4) (# up "<0 5>") $ sound "tozabg*2" # n (sine * 4) # lpf "<200 1000 5000>" # legato "<0.5 0.25>"
 
