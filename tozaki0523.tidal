@@ -1,0 +1,13 @@
+t1 $ sound "tozabf" # n "<0 1 1 3>" # vowel "a o i o" # lpf "<500 1000 8000 5000>" # lpq 0.2 # gain "<1.0 0.5 1.0>" # delay 0.1 # delaytime 1.0 # delayfeedback 0.1 # room 0.1 # size 0.1 # cutoff "<250 50>" # resonance 0.1 # legato "<0.5 0.5 0.75 0.75>"
+
+t5 silence
+
+t2 $ fast "<1 2 3 8>" $ sound "tozabb" # n (irand 2) # cutoff 1000 # resonance 0.5 # gain "<0.95 1.0 0.98 0.97>"
+
+t3 $ weave 32 (pan sine) [sound "tozabb:2",
+sound "tozabb:2" # accelerate "[-1 2]/2"
+]
+
+t4 $ slow 8 $ sound "tozabh/2" # cutoff 650 # resonance 0.1 # room 0.1 # gain 0.95 # accelerate "[-1 2]/2" # shape "<0.5>"
+
+t5 $ slowspread ($) [id, fast 2, iter 4, fast 3] $ stut 4 0.9 (1/16) $ smash 4 [1,0.5,0.25,2] $ slow 2 $ sound "tozaba:1" # n "<2 3 4 5>" # lpf "<200 500>" # lpq "<0.2>" # cutoff "<100 250>" # resonance "<0.6>" # room "<0.5>" # size "<0.5>" # legato "<0.125 0.25 0.5 0.25>" # accelerate "[-1 2]/4" # shape "0.5" # speed (every 4 (fast 2) "<1 3 1 1>") # gain 1.0
