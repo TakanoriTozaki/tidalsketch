@@ -1,0 +1,9 @@
+t1 $ sound "tozabb" # n "<0 0>" # gain 1.2
+
+t2 $ chunk 4 (hurry 2) $ sound "tozabc:1*2" # n "<3>" # cut 500 # cutoff 1000 # delay 0.1 # resonance 0.2
+
+t3 $ sound "tozabd:1" # gain 0.8 # pan (scale 0.0 1.0 $ slow 2 $ saw) # cut 1000 # cutoff "500" # resonance 0.3
+
+t4 $ stut' 4 (125/5) (slow 2) $ sound "tozabe*8" # gain (scale 0.65 0.65 rand) # pan rand # cutoff "<1000 2000>" # legato "<0.25 0.5>"
+
+t5 $ slow 2 $ sound "tozabh/2" # legato "<0.25 0.5 0.75>"
