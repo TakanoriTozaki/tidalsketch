@@ -1,0 +1,4 @@
+t1 $ stack [degradeBy 0.25 $ stut' 4 (125/5) (slow 2) $ sound "tozabb*8" # pan (scale 0.0 1.0 $ fast 2 $ sine) # n (irand 50) # cut "3000" # cutoff "3000" # resonance "0.3",
+sound "~ tozabd:1" # gain (scale 0.95 1.2 sine) # cut "5000" # cutoff "500" # legato "0.5" # resonance "0.2",
+slow 2 $ sound "~ tozabh/2" # cut "2500"
+]
