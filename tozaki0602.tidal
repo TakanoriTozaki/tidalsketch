@@ -1,0 +1,10 @@
+t1 $ whenmod 17 15 (iter 8)
+$ every 3 (rev)
+$ every 4 (chop 4)
+$ every 7 (gap 4)
+$ every 8 (|=| accelerate "-1 1")
+$ every 9 (|=| coarse "{16 8 4 12 24}%16")
+$ every 6 (|=|  vowel "<a o>")
+$ every 11 (|*| speed (scale 0.9 1.25 $ saw))
+$ stack [degradeBy 0.25 $ stut' 4 (125/4) (slow 2) $ sound "tozabb*8" # pan (scale 0.0 1.0 $ iter 2 $ sine) # n (irand 50) # cut "1000" # cutoff "5000" # resonance "0.3"
+]
