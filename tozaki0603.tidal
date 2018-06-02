@@ -1,0 +1,1 @@
+t1 $ whenmod 20 15 (fast 1.25) $ every 3 (rev) $ every 4 (chop 4) $ every 7 (gap 4) $ every 9 (# coarse "{16 8 4 12 24}%16") $ every 6 (|=| vowel "<a u>") $ every 11 (|*| speed (scale 0.9 1.25 $ saw)) $ sound "tozabe*8" # n (irand 50) # pan (scale 0.0 1.0 $ iter 2 $ tri) # cut "1000" # cutoff "<3000>" # resonance 0.1 # legato "<1.0>"
