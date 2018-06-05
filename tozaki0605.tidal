@@ -1,0 +1,7 @@
+t1 $ sound "tozabb(3,8)" # n "<0 0 0 0 0 0 0 0 0 0 10>" # pan (scale 0.0 1.0 $ slow 3 $ sine) # delay (scale 0.0 1.0 $ slow 2 $ rand) # gain "1.4"
+
+hush
+
+t2 $ whenmod 32 16 (density 1.25) $ every 8 (# accelerate "-1 1") $ every 9 (# coarse "{16 8 4 12 24}%8") $ every 11 (# vowel "<a u>") $ every 12 (|*| speed (scale 0.9 1.25 $ saw))$ sound "tozabb*4" # n "0 0 0 0" # pan (scale 0.0 1.0 $ slow 6 $ rand) # delay (scale 0.0 1.0 $ slow 4 $ sine) # room "<0.1>" # cutoff "<3000>" # resonance "<0.2 0.1>"
+
+t3 $ every 5 (# speed "0.8") $ every 6 (rev) $ every 7 (gap 4) $ every 8 (chop 4) $ stut' 4 (0.125/4) (slow 2) $ sound "tozabe*2" # n (irand 10) # cutoff "<1000>" # legato "<0.25 0.125>" # cut "1000"
