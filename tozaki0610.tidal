@@ -1,0 +1,9 @@
+t1 $ sound "tozabc*8" # n (irand 5) # pan (scale 0.0 1.0 rand) # delay (scale 0.0 1.0 $ slow 2 $ rand) # gain "1.0"
+
+t2 $ sound "tozabd*(3,8)" # n "<0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30>" # delay (scale 0.0 1.0 $ slow 4 $ rand) # cutoff "<1000 3000 4000>" # resonance "<0.2>" # legato "<0.25 0.5>" # gain "1.0"
+
+t3 $ sound "tozaba*2 tozaba:1*4" # n "21 22 23 24" # end (slow 2 $ sine * 0.04)
+
+t4 $ degradeBy 0.5 $ sometimes (|+| n "<-12 -8 -4>") $ every 3 (0.25 <~) $ jux (rev) $ off 0.25 (# s "pulse") $ n (off 0.125 (+12) $ off 0.25 (+7) $ slow 2 "d5*2 e6(3,8)") # sound "tozaba:3" # n "<10 15>" # lpf (scale 500 1000 sine)
+
+hush
