@@ -1,0 +1,9 @@
+t1 $ sound "tozaba*8" # n (scale 0 6 sine) # gain (scale 0.95 0.95 sine) # pan (scale 0.0 1.0 sine) # legato "<0.25>"
+
+t2 $ sound "tozabd*4" # n (scale 3 4 rand) # cutoff "<500 1000 4000>" # resonance "<0.4>" # legato "<0.25 0.15>" # gain "1.0 0.95 0.8 1.0" # pan sine # delay (scale 0.1 0.5 tri)
+
+t3 $ every 2 (fast 2) $ every 3 (0.25 <~) $ sound "tozabc*2 tozaba:1*2" # n "<3 4 5>" # end (slow 2 $ sine * 0.04) # pan (scale 0.0 1.0 sine)
+
+t4 $ off 0.25 (# crush 3 ) $ n (shuffle 4 "0 4") # sound "tozabe" # gain "0.90 0.95 0.97 0.90" # legato "<0.25>" # pan (scale 0.0 1.0 rand)
+
+hush
