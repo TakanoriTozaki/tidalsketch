@@ -1,6 +1,7 @@
-t1 $ every 2 (fast 2) $ every 3 (slow 2) $ sound "tozabc*8" # n (scale 0 3 sine) # gain (scale 0.9 1.0 sine) # pan (scale 0.0 1.0 rand) # shape (scale 0.1 0.6 rand) # legato "<1.0 0.5>" # room "<0.1>"
+t1 $ every 2 (fast 2) $ every 3 (slow 2) $ sound "tozabc*64" # n (scale 1 5 rand) # gain (scale 0.9 1.0 sine) # pan (scale 0.0 1.0 saw) # shape (scale 0.0 0.0 rand) # legato "<1.0 0.25>" # room "<0.1>"
 
 hush
+
 
 t2 $ sound "tozabd*4" # n (scale 0 3 rand) # cutoff "<500 1000 4000>" # resonance "<0.3>" # legato "<0.5 0.25>" # gain "1.0 0.95 0.8 1.0" # pan (scale 0.0 1.0 tri) # delay (scale 0.1 0.5 tri) # shape (scale 0.0 0.0 saw)
 
