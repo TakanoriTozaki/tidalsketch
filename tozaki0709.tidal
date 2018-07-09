@@ -1,0 +1,13 @@
+t1 $ sound "tozabe*8 tozabe*16" # n (scale 4 4 square) # gain (scale 0.8 0.9 sine) # pan (scale 0.5 0.5 $ slow "<1 5>" $ sine) # nudge (scale 0.0 1.0 $ slow 64 $ sine) # lpf (scale 150 550 rand)
+
+t2 $ slow 4 $ sound "tozaba*8" # n "3 4 6 7" # pan "<0.5 0.25 0.5 0.75 0.5>" # nudge " 0 1.0 0.5 0.7"
+
+t3 $ whenmod 32 16 (slow 2) $ sometimesBy 0.25 (slow 3) $ every 5 (0.125 <~) $ every 4 (fast 2) $ every 3 (0.25 <~) $ sound "tozabc*2 tozaba:1*2" # n "<4 5 6>" # end (slow 2 $ sine * 0.2) # pan "<0.0 0.25 0.75 1.0>"
+
+t4 $ cat [sound "tozabe*8" # lpf "3000" # gain "<0.85 0.9 0.85>" # pan "<0.0 0.2 0.5 0.7 1.0>" # legato "<0.8 0.75 0.5 0.8>" # lpf "<1000 2000>",
+rev $ chop 8 $ sound "tozabe" # n (scale 2 4 sine) # gain "<0.95 0.9 0.95>" # legato "<0.5 0.75 0.5 1.0>"]
+
+t5 $ stack [
+sound "tozabc*2" # n "<2 4>" # pan "<0.0 0.25 0.5 0.75 1.0>" # shape "<0.0 0.25 0.5>" # legato "<0.25>" # lpf "1000 3000" # resonance "<0.25 0.75>",
+sound "tozabc" # n "<5 7>" # pan rand # lpf "5000 7500" # lpq "<0.1 0.15>"
+]
