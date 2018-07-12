@@ -1,4 +1,6 @@
-t1 $ every 4 (0.25 <~) $ sound "tozabe*4" # n "1" # gain (scale 0.8 0.9 sine) # pan (scale 0.0 1.0 sine) # nudge (scale 0.0 0.5 $ slow 8 $ sine) # lpf (scale 150 450 rand)
+t1 $ every 3 (0.125 <~) $ every 4 (0.25 <~) $ sound "tozabe*8" # n "3 4" # gain (scale 0.9 1.0 sine) # pan (scale 0.0 1.0 sine) # nudge (scale 0.0 1.0 $ slow 8 $ sine) # lpf (scale 150 550 rand)
+
+hush
 
 t2 $ slow 4 $ sound "tozaba*8" # n "3 4 6 7" # pan "<0.5 0.25 0.5 0.75 0.5>" # nudge " 0 1.0 0.5 0.7"
 
