@@ -1,4 +1,6 @@
-t1 $ sound "tozabc(3,8)" # n "0" # gain (scale 0.9 1.0 sine) # pan (scale 0.0 1.0 sine) # nudge (scale 0.0 1.0 $ slow 8 $ sine) # lpf (scale 2500 5500 rand) # resonance "<0.25 0.50>"
+t1 $ sound "tozabc*8" # n "<1 7>" # gain (scale 0.9 1.0 sine) # pan (scale 0.0 1.0 rand) # nudge (scale 0.0 1.0 $ slow 8 $ sine) # lpf (scale 2500 5500 rand) # resonance "<0.25 0.50>"
+
+hush
 
 t2 $ slow 4 $ sound "tozaba*8" # n "3 4 6 7" # pan "<0.5 0.25 0.5 0.75 0.5>" # nudge " 0 1.0 0.5 0.7"
 
