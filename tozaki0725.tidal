@@ -2,14 +2,14 @@ hush
 
 t1 $ stack
 [
-note "[8 ~ ~ ~]" # s "tozabc" # n 0 # speed (1)
--- note "[~ 8 ~ ~]" # s "tozabc" # n 0 # speed (2),
--- note "[~ ~ 8 ~]" # s "tozabc" # n 0 # speed (3),
--- note "[~ ~ ~ 8]" # s "tozabc" # n 0 # speed (4),
--- note "[~ ~ ~ ~ 8]" # s "tozabc" # n 0 # speed (5),
--- note "[~ ~ ~ ~ ~ 8]" # s "tozabc" # n 0 # speed (6),
--- note "[~ ~ ~ ~ ~ ~ 8 ~]" # s "tozabc" # n 0 # speed (7),
--- note "[~ ~ ~ ~ ~ ~ ~ 8]" # s "tozabc" # n 0 # speed (8)
+note "[8 ~ ~ ~]" # s "tozabc" # n 0 # speed (1),
+note "[~ 8 ~ ~]" # s "tozabc" # n 0 # speed (2),
+note "[~ ~ 8 ~]" # s "tozabc" # n 0 # speed (3),
+note "[~ ~ ~ 8]" # s "tozabc" # n 0 # speed (4),
+note "[~ ~ ~ ~ 8]" # s "tozabc" # n 0 # speed (5),
+note "[~ ~ ~ ~ ~ 8]" # s "tozabc" # n 0 # speed (6),
+note "[~ ~ ~ ~ ~ ~ 8 ~]" # s "tozabc" # n 0 # speed (7),
+note "[~ ~ ~ ~ ~ ~ ~ 8]" # s "tozabc" # n 0 # speed (8)
 -- e 3 8 $ note "1 ~ ~ ~" # s "tozabi" # n (scale 1 8 $ slow 8 $ sine) # pan (scale 0.5 0.5 $ slow 16 $ saw) # nudge (scale 0.5 0.5 $ slow 32 $ sine) # legato "<1.0 0.75>" # gain "1.2",
 -- note "1 1 ~ ~" # s "tozaba" # n (sine * 2) # legato "1.7" # lpf (scale 200 500 sine) # lpq 0.3
 -- note "~ ~ ~ 1" # s "tozaba" # n (sine * (scale 1 2 $ slow 2 $ sine)) # legato "1.0" # lpf 1000 # lpq 0.4,
