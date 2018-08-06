@@ -1,0 +1,15 @@
+t1 $ stack [
+s "testsynth*4" # sustain "0.1" # pan "{0.0 0.5 1.0}%4" # gain (scale 0.8 0.9 sine)
+-- note "1 ~ ~ 1*1024" # s "testsynth" # sustain "0.1" # gain 0.93 # pan (scale 0.0 1.0 $ slow 2 $ sine),
+-- stut' 4 (0.125/4) (slow 4) $ every 2 (0.125 <~) $ every 3 (iter 2) $ every 4 (slow 2) $ note "~ ~ ~ ~ ~ ~ ~ 1*512" # s "testsynth" # sustain "0.1" # gain (scale 0.88 0.90 $ slow 2 $ sine)
+]
+
+t2 $ stack [
+-- s "testsine*8" # sustain "0.5" # pan "0.5"
+note "1 ~ ~ ~" # s "testsine" # sustain "0.1" # pan "<0.0 0.5 1.0>"
+-- stut' 4 (0.125/4) (# speed (-1)) $ s "testsine*8" # sustain "0.1" # pan "{0.0 0.5 1.0}%4" # n (scale 0 32 $ slow 2 $ square)
+-- whenmod 32 16 (slow 2) $ stut' 3 (0.125/4) (slow 2) $ every 2 (iter 2) $ every 4 (0.125 <~) $ note "1*16 ~ ~ ~ ~ 1*32 ~ 1*512"# s "testsine" # gain (scale 0.91 0.95 $ slow 2 $ sine) # pan "{0.0 0.5 1.0}%4"
+-- every 2 (0.125 <~) $ note "~ ~ ~ ~ ~ ~ ~ 1*1024" # s "testsine" # gain (scale 7.1 7.5 $ slow 2 $ sine) # pan "{0.4 0.7}"
+]
+
+hush

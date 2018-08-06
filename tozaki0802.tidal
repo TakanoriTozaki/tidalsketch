@@ -1,0 +1,37 @@
+t1 $ stack
+[
+-- whenmod 8 2 (slow 4) $ stut' 4 (0.25/4) (slow 2) $ every 2 (125 <~) $ s "tozaa*4" # n (scale 1 8 $ slow 2 $ sine) # lpf (scale 500 1500 $ slow 4 $ sine) # lpq 0.5 # resonance 0.2 # gain (scale 0.85 0.95 $ slow 2 $ sine),
+s "tozac*2" # n 0 # pan (scale 0.4 0.5 $ slow 2 $ saw) # lpf (scale 5000 8500 $ slow 2 $ saw),
+s "tozaj" # n 0 # pan (scale 0.0 1.0 $ slow 2 $ sine) # lpf (scale 2500 8000 $ slow 4 $ sine) # resonance 0.2 # room 0.1,
+s "tozab*2" # n (scale 1 8 sine) # lpf 2500,
+s "tozai*2" # lpf 4000 # legato 0.5,
+stut' 8 (0.125/4) (slow 2) $ s "tozak" # n "<1>" # legato 0.125 # lpf (scale 750 1500 $ slow 2 $ sine)
+]
+
+t2 $ stack
+[
+-- note "1 7 12 24" # s "supermandolin" # gain (scale 1.2 1.4 $ slow 2 $ sine),
+-- note "1*2 1 ~ 1*2" # s "supergong",
+-- note "1 ~ 1 ~ 1 ~ 1 1" # s "superpiano" # lpq 0.4 # lpf (scale 2500 5000 $ slow 4 $ sine),
+-- note "1*64 ~" # s "superhex" # lpf (scale 100 500 $ slow 4 $ sine) # gain (scale 0.5 0.65 $ slow 4 $ sine),
+-- s "superkick*2" # gain "<2.0 2.5 2.0 2.5>",
+-- s "super808(3,8)" # lpq (scale 0.2 0.5 $ slow 2 $ sine) # resonance 0.5 # room 0.1,
+-- every 4 (0.25 <~) $ note "~ ~ ~ 1" # s "superhat",
+note "1 ~ 1 ~ " # s "supersnare",
+stut' 2 (125/4) (iter 2) $ every 3 (0.25 <~) $ every 4 (slow 2) $ note "~ 1 ~ 1*2" # s "superclap"
+-- s "supersiren" # pan "<0 0.5 1.0>" # gain "<0.95 1.0>"
+-- s "supersquare",
+-- s "supersaw",
+-- s "superpwn",
+-- s "supercomparator",
+-- s "superchip",
+-- s "supernoise",
+-- s "superfork",
+-- s "superhammond",
+-- s "supervibe",
+-- s "superhoover",
+-- s "superzow",
+-- s "superstatic"
+]
+
+hush

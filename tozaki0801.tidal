@@ -1,0 +1,11 @@
+t1 $ stack
+[
+-- whenmod 8 2 (slow 4) $ stut' 4 (0.25/4) (slow 2) $ every 2 (125 <~) $ s "tozaa*4" # n (scale 1 8 $ slow 2 $ sine) # lpf (scale 500 1500 $ slow 4 $ sine) # lpq 0.5 # resonance 0.2 # gain (scale 0.85 0.95 $ slow 2 $ sine)
+note "1 ~ 1 ~" # s "tozac" # pan (scale 0.4 0.5 $ slow 2 $ saw) # lpf (scale 5000 8500 $ slow 2 $ saw)
+-- s "tozaj" # n 0 # pan (scale 0.0 1.0 $ slow 2 $ sine) # lpf (scale 2500 8000 $ slow 4 $ sine) # resonance 0.2 # room 0.1
+-- s "tozab*2" # n (scale 1 8 sine) # lpf 2500
+-- s "tozai*2" # lpf 4000 # legato 0.5
+-- stut' 4 (125/4) (slow 2) $ s "tozak" # n "<1>" # legato 0.125 # lpf (scale 750 1500 $ slow 2 $ sine)
+]
+
+hush
